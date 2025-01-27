@@ -1,0 +1,133 @@
+theme = "catppuccin_mocha"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor]
+line-number = "relative"
+mouse = true
+true-color = true
+shell = ["bash", "-c"]
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+# Completion
+completion-trigger-len = 2
+auto-completion = true
+completion-replace = true
+preview-completion-insert = false
+
+# Auto
+auto-format = true
+auto-save = true
+auto-info = true
+auto-pairs = true
+
+# Guides
+cursorline = true
+cursorcolumn = false
+idle-timeout = 50
+color-modes = true
+bufferline = "multiple"
+# rulers = [80, 120]
+
+[editor.inline-diagnostics]
+cursor-line = "error"
+
+[editor.smart-tab]
+enable = true
+supersede-menu = true
+
+[editor.whitespace.render]
+space = "none"
+nbsp = "none"
+tab = "none"
+newline = "none"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = "⍽"
+tab = "→"
+newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+[editor.file-picker]
+hidden = false
+git-ignore = false
+
+[editor.statusline]
+left = [
+"mode",
+"separator",
+"spinner",
+"separator",
+"file-name",
+"version-control",
+"register",
+"primary-selection-length",
+]
+
+center = [
+"separator",
+"file-modification-indicator",
+"position-percentage",
+"separator",
+]
+
+right = [
+"diagnostics",
+"workspace-diagnostics",
+"selections",
+"position",
+"file-encoding",
+"file-line-ending",
+"separator",
+"file-type",
+]
+# separator = ""
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.lsp]
+snippets = true
+display-inlay-hints = false
+display-messages = true
+display-signature-help-docs = true
+auto-signature-help = true
+
+[editor.indent-guides]
+render = true
+character = "╎" # Some characters that work well: "▏", "┆", "┊", "╎"
+skip-levels = 0
+
+[editor.soft-wrap]
+enable = true
+max-wrap = 10 # increase value to reduce forced mid-word wrapping
+max-indent-retain = 40
+
+[keys.normal]
+D = ["ensure_selections_forward", "extend_to_line_end", "delete_selection"]
+C-x = "code_action"
+C-p = "jump_forward"
+esc = ["collapse_selection", "keep_primary_selection"]
+C-g = [":new", ":insert-output lazygit", ":buffer-close!", ":redraw"]
+C-k = [ "extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+C-s = ":w!"
+C-q = ":buffer-close"
+C-a = ":reload-all"
+C-v = [":clipboard-paste-before"]
+y = [":clipboard-yank", "yank"]
+
+[keys.insert]
+C-x = "completion"
+A-left = "goto_line_start"
+A-right = "goto_line_end_newline"
+C-c = "normal_mode"
+C-s = [":w!", "normal_mode"]
+C-q = [":buffer-close", "normal_mode"]
+C-v = [":clipboard-paste-before"]
+
+[keys.select]
+y = [":clipboard-yank", "yank"]
