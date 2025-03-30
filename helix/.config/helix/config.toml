@@ -30,7 +30,7 @@ cursorcolumn = false
 idle-timeout = 50
 color-modes = true
 bufferline = "multiple"
-# rulers = [80, 120]
+rulers = [80]
 
 [editor.inline-diagnostics]
 cursor-line = "error"
@@ -53,7 +53,7 @@ newline = "⏎"
 tabpad = "·" # Tabs will look like "→···" (depending on tab width)
 
 [editor.file-picker]
-hidden = false
+hidden = true
 git-ignore = false
 
 [editor.statusline]
