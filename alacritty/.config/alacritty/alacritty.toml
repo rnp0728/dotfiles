@@ -21,26 +21,3 @@ args = ["-l", "-c", "zellij"]
 size = 14.0
 offset = {x = 0, y = 2}
 
-[font.bold]
-# family = "MesloLGS Nerd Font Mono"
-family = "CaskaydiaCove Nerd Font"
-# family = "MonaspiceAr Nerd Font Mono Bold"
-style = 'Bold'
-
-[font.bold_italic]
-family = "CaskaydiaCove Nerd Font"
-# family = "MesloLGS Nerd Font Mono"
-# family = "MonaspiceAr Nerd Font Mono Bold Italic"
-style = 'Bold Italic'
-
-[font.italic]
-# family = "MonaspiceAr Nerd Font Mono Italic"
-family = "CaskaydiaCove Nerd Font"
-# family = "MesloLGS Nerd Font Mono"
-style = 'Italic'
-
-[font.normal]
-# family = "MesloLGS Nerd Font Mono"
-# family = "MonaspiceAr Nerd Font Mono"
-family = "CaskaydiaCove Nerd Font"
-style = 'Regular'
